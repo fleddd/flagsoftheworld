@@ -1,0 +1,118 @@
+
+.header{
+  display: block;
+  max-height: 11.875em;
+  margin-bottom:  4em;
+  @include mobile{
+    max-height: 18.125em;
+    
+  }
+  @include mobile{
+    
+  }
+  &__title{
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    
+    background-color: $primary-color;
+    
+    h1{
+      height: 100%;
+      width: 100%;
+      font-size: 40px;
+      text-transform: uppercase;
+      line-height: 2.2;
+      @include mobile{
+        font-size: 26px;
+        line-height: 100px;
+      }
+    }
+ }
+ &__nav{
+    position: relative;
+    font-size: 22px;
+    
+    height: 50px;
+    background-color: $accent-color;
+    @include tablet{
+      height: 100px;
+    }
+    @include mobile{
+      height: 150px;
+    }
+    
+    &-list{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+      list-style: none;
+      justify-content: center;
+      align-items: center;
+      
+    }
+    &-item{
+      position: relative;
+      display: inline-block;
+      text-align: center;
+      width: 5.25em;
+      font-size: 18px;
+      line-height: 50px;
+      font-weight: 300;
+      transition: all .2s ease-in;
+      cursor: pointer;
+      &:hover{
+        transform: translateY(-2px);
+        color: rgb(255, 208, 0);
+      }
+
+
+      .dropdown-menu{
+        font-size: 12px;
+        width: 200px;
+        position: absolute;
+        top: calc(100% +0.25em);
+        left: 0;
+        background-color: $accent-color;
+      }
+    }
+    .active{
+      color: rgb(255, 208, 0);
+    }
+    &-search{
+      width: fit;
+      display: flex;
+      justify-content: center;
+
+    }
+    &-input{
+      width: 500px;
+      height: 40px;
+      background-color: #fff;
+      background-clip: padding-box;
+      border: 3px solid $accent-color;
+      @include mobile{
+        width: 100%;
+      }
+
+      font-size: 20px;
+      font-weight: normal;
+      color: #000;
+      
+      padding-left: 10px;
+      outline: none;
+      transition: all .2s ease-in;
+      &::placeholder{
+        font-size: 18px;
+        font-family: $font;
+        color: #000;
+        opacity: 0.5;
+      }
+      &:focus{
+        outline: none;
+       
+      }
+    }
+    
+ }
+ 
+}

@@ -1,0 +1,8 @@
+.header {
+  height: 200px;
+  background-color: rgb(0, 0, 0);
+}
+.header__title {
+  text-align: center;
+  text-transform: uppercase;
+}/*# sourceMappingURL=header.css.map */

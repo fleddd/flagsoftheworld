@@ -1,0 +1,22 @@
+@import './base/variables';
+@import './base/resets';
+@import './base/mixins';
+@import './base/fonts';
+
+@import './blocks/header.scss';
+@import './blocks/content.scss';
+
+
+html{
+  height: 100%;
+  min-width: 100%;
+}
+
+
+body{
+    background: #fff;
+    color: $text-color;
+    font-family: $font;
+    font-size: 16px;
+}
+

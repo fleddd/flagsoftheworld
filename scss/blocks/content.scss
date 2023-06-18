@@ -1,0 +1,46 @@
+.main{
+  min-height: 100vh;
+  margin: 0 auto;
+  display: block;
+  &__container{
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .main__list{
+      width: 1000px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 200px));
+      justify-content: center;
+      align-items: center;
+      grid-row-gap: 1.5em;
+      gap: 15px;
+    }
+    .list__item{
+      position: relative;
+      height:100px;
+      color: #000;
+      border: 2px solid #00000091;
+      padding: 65px 0;
+      background-color: #eeeeee52;
+      @include flexCenter(column);
+      gap: 7px;
+      &-img{
+        width: 96px;
+        height: 72px;
+        @include flexCenter(column)
+      }
+      &-name{
+        color: #000;
+        user-select: text;
+      }
+      &-region{
+        position: absolute;
+        top: 0.5em;
+        left: 0.5em;
+        color: #000;
+        font-size: 12px;
+      }
+    }
+  }
+}
