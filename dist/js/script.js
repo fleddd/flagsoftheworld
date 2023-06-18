@@ -36,6 +36,7 @@ function renderData(allCountry){
       newItemImage.classList.add('list__item-img')
       const image = document.createElement('img')
       image.src = allCountry[el].name === 'Russia' ? "./dist/img/poop.png" : `${allCountry[el].flag.medium}`
+      image.alt = "Image didn't load"
       newItemImage.appendChild(image)
 
       const newItemName = document.createElement('div')
